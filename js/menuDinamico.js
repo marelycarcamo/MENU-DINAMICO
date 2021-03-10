@@ -17,15 +17,15 @@ const appMenu ={
 			switch(Number(this.selected)){
 				case 1:
 					this.arreglo = this.seccionA
-					this.seccion= "sección A"
+					this.seccion("sección A").lowCase
 					break;
 				case 2:
 					this.arreglo = this.seccionB
-					this.seccion= "sección B"
+					this.seccion("sección B").lowCase
 					break;
 				case 3:
 					this.arreglo = this.seccionC
-					this.seccion= "sección C"
+					this.seccion("sección A").lowCase
 					break;
 			}
 		},
