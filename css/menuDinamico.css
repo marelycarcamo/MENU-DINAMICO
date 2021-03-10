@@ -2,8 +2,44 @@
 	padding: 0px;
 }
 
+body{
+	background-color: darkslategrey;
+}
 .menu{ display:flex;
 	flex-wrap: wrap;
 	margin:auto;
+}
+
+#cajaFormulario{
+	display:flex;
+	justify-content: flex-end;
+	margin-right: 40px;
+	margin-top:40px;
+	
+}
+
+li{
+	padding:12px;
+}
+
+#formulario{
+display:flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+border: rgb(149, 182, 219) 1px solid;
+height: 300px;
+width: 300px;
+font-weight: bold;
+color:rgb(161, 194, 206);
+box-shadow: 5px 5px 4px #888888;
+padding-bottom: 30px;
+padding-top:30px;
+}
+
+#sel-select,#tx-submenu{
+	width:158px;
+	font-size: large;
+	
 }
 
