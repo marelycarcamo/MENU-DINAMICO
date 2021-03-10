@@ -16,34 +16,41 @@ const appMenu ={
 					
 			switch(Number(this.selected)){
 				case 1:
+					
 					this.arreglo = this.seccionA
-					this.seccion("sección A").lowCase
+					this.seccion="sección A"
 					break;
 				case 2:
 					this.arreglo = this.seccionB
-					this.seccion("sección B").lowCase
+					this.seccion="sección B"
 					break;
 				case 3:
 					this.arreglo = this.seccionC
-					this.seccion("sección A").lowCase
+					this.seccion="sección C"
 					break;
 			}
 		},
 
 		click(){
-		
-			if (this.texto!=""){
-				
-				let r = confirm("Añadir el item '" + this.texto + "' a la " + this.seccion + "?");
+					
+			if ((this.texto!="") && (this.selected!="")){
+				let r = confirm("Añadir el submenú '" + this.texto.toLowerCase(this.texto) + "' a la " + this.seccion + "?");
 				if (r == true) {
 					this.arreglo.push(this.texto);
 					console.log(this.arreglo);
-					txt = "El item " + this.texto + " se agregó correctamente." ;
+					txt = "El submenú " + this.texto.toLowerCase(this.texto) + " se agregó correctamente." ;
 					this.selected="";
-					this.texto=""
-					alert("El item se agregó correctamente a la " + this.seccion);
+					this.texto="";
+					alert("El submenú se agregó correctamente a la " + this.seccion);
 				}
+			}else if(this.selected==""){
+				alert("Debe seleccionar la sección.")
+			}else if(this.texto==""){
+				alert("Debe ingresar el submenú.")
+			}else{
+				pass
 			}
+			
 		},
 			
 		limpiar(){
