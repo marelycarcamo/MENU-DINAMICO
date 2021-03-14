@@ -16,7 +16,6 @@ const appMenu ={
 					
 			switch(Number(this.selected)){
 				case 1:
-					
 					this.arreglo = this.seccionA
 					this.seccion="sección A"
 					break;
